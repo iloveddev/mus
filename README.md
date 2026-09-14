@@ -1,132 +1,269 @@
-<div align="center"><img src="https://www.mushoku.eu.cc/waifu/" width="280" alt="AnimeAV1 Waifu">🎌 AnimeAV1
+<div align="center">
 
-Anime, simplified.
+<img src="https://www.mushoku.eu.cc/waifu/" width="300" alt="Random animated waifu">
 
-   
+# 🎌 AnimeAV1 API
 
-Anime API focused on simplicity, speed and clean JSON responses.
+### Anime, simplified.
 
-🌸 ありがとうございます！ Thanks for visiting AnimeAV1!
+[![PHP](https://img.shields.io/badge/PHP-Native-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
+[![API](https://img.shields.io/badge/API-REST-00ADD8?style=for-the-badge)](#-endpoints)
+[![JSON](https://img.shields.io/badge/Response-JSON-000000?style=for-the-badge&logo=json&logoColor=white)](#-endpoints)
+[![Status](https://img.shields.io/badge/Status-Online-success?style=for-the-badge)](https://www.mushoku.eu.cc/)
+
+**Anime API focused on simplicity, speed and clean JSON responses.**
+
+🌸 ありがとうございます！ ✨
 
 </div>
----
-
-✨ Features
-
-Feature	Description
-
-📚 Catalog	Browse the available anime catalog
-🔎 Search	Search anime by name
-🎬 Episodes	Access anime episodes
-🎞️ Anime Information	Detailed information for each anime
-📊 MAL / Jikan	Anime metadata through MyAnimeList data
-🎧 SUB / DUB	Support for available subtitle and dub information
-🚀 REST API	Simple HTTP endpoints returning JSON
-💾 Cache	Caching system to reduce unnecessary requests
-🛡️ Rate Limit	Protection against excessive requests
-
-
 
 ---
 
-🌐 Servers
+## ✨ Features
 
-Main Server
+| Feature | Description |
+|---|---|
+| 📚 Catalog | Browse the available anime catalog |
+| 🔎 Search | Search anime by name |
+| 🎬 Episodes | Access anime episode information |
+| 📊 MAL / Jikan | Anime metadata through MyAnimeList data |
+| 🎧 SUB / DUB | Support for available subtitle and dub information |
+| 🚀 REST API | Simple HTTP endpoints returning JSON |
+| 💾 Cache | Caching system to reduce unnecessary requests |
+| 🛡️ Rate Limit | Protection against excessive requests |
+
+---
+
+## 🌐 Servers
+
+### Main Server
 
 https://www.mushoku.eu.cc/
 
-Alternate Server
+### Alternate Server
 
 http://ww2.mushoku.eu.cc/
 
-
 ---
 
-📡 Endpoints
+## 📡 Endpoints
 
 All endpoints return JSON data.
 
-📚 Catalog
+### 📚 Catalog
 
-GET /catalogo/
+`GET /catalogo/`
 
 Example:
 
 https://www.mushoku.eu.cc/catalogo/
 
-🔎 Search
+### 🔎 Search
 
-GET /buscar/?q=
+`GET /buscar/?q=`
 
 Example:
 
 https://www.mushoku.eu.cc/buscar/?q=Mushoku%20Tensei
 
-🎬 Anime
+### 🎬 Anime
 
-GET /anime/{slug}/
+`GET /anime/{slug}/`
 
 Example:
 
 https://www.mushoku.eu.cc/anime/mushoku-tensei/
 
-🎞️ Episode
+### 📺 Episode
 
-GET /ep/{slug}/E{numero}/
+`GET /ep/{slug}/E{numero}/`
 
 Example:
 
 https://www.mushoku.eu.cc/ep/mushoku-tensei/E1/
 
-📊 MyAnimeList
+### 📊 MyAnimeList
 
-GET /mal/{slug}/
+`GET /mal/{slug}/`
 
 Example:
 
 https://www.mushoku.eu.cc/mal/mushoku-tensei/
 
-🆕 Latest Anime
+### 🆕 Latest Releases
 
-GET /ultimos/
+`GET /ultimos/`
 
 Example:
 
 https://www.mushoku.eu.cc/ultimos/
 
-🔥 Top Anime
+### 🔥 Top Anime
 
-GET /top/
+`GET /top/`
 
 Example:
 
 https://www.mushoku.eu.cc/top/
 
-🔤 Anime by Letter
+### 🔤 Alphabetical Search
 
-GET /az/{letra}/
+`GET /az/{letra}/`
 
 Example:
 
 https://www.mushoku.eu.cc/az/a/
 
-📅 Schedule
+### 📅 Schedule
 
-GET /horario/
+`GET /horario/`
 
 Example:
 
 https://www.mushoku.eu.cc/horario/
 
-
 ---
 
-📦 Example Response
+## 📦 Example Response
 
+```json
 {
   "title": "Mushoku Tensei",
   "slug": "mushoku-tensei",
   "episodes": [],
+  "status": "Finished Airing",
+  "type": "TV",
+  "year": 2021
+}
+```
+
+---
+
+## 🛡️ Rate Limit
+
+AnimeAV1 currently limits requests to:
+
+`30 requests / minute / IP`
+
+This limit helps protect the API and maintain stable performance.
+
+---
+
+## ⚡ Quick Start
+
+### JavaScript
+
+```js
+fetch("https://www.mushoku.eu.cc/catalogo/")
+  .then(response => response.json())
+  .then(data => console.log(data));
+```
+
+### PHP
+
+```php
+<?php
+
+$url = "https://www.mushoku.eu.cc/catalogo/";
+$data = file_get_contents($url);
+$json = json_decode($data, true);
+
+print_r($json);
+```
+
+---
+
+## 🏗️ Built With
+
+- 🐘 Native PHP
+- 🌐 Apache
+- 📄 `.htaccess`
+- 🧩 Custom scraper
+- 💾 File-based caching
+- 🚦 Custom rate limiting
+- 🔗 REST-style endpoints
+- 📦 JSON responses
+
+AnimeAV1 uses a **custom native PHP backend** and does not depend on CakePHP, FuelPHP or another full-stack PHP framework.
+
+---
+
+## 📁 Project Structure
+
+```text
+animeav1/
+├── index.php
+├── 404.php
+├── anime.php
+├── buscar.php
+├── catalogo.php
+├── ep.php
+├── horario.php
+├── mal.php
+├── top.php
+├── ultimos.php
+├── az.php
+├── cache/
+│   └── .htaccess
+└── src/
+    ├── RateLimit.php
+    └── Scraper.php
+```
+
+---
+
+## 🎌 AnimeAV1
+
+AnimeAV1 is designed as a lightweight anime API that can be consumed by websites, applications, players and other projects.
+
+The API focuses on keeping the interface simple:
+
+`Request → Processing → JSON`
+
+No complicated SDK is required.
+
+---
+
+## 📜 Usage Policy
+
+AnimeAV1 may be integrated into non-profit projects through the official API.
+
+The API, source code and infrastructure may not be:
+
+- Modified
+- Cloned
+- Migrated
+- Self-hosted
+- Redistributed
+- Resold
+- Used commercially
+- Presented as an independent copy of AnimeAV1
+
+Attribution to AnimeAV1 is required when integrating the API.
+
+---
+
+## 🐛 Issues & Abuse
+
+For bugs, technical problems or API abuse reports, open an issue in this repository.
+
+Please do not report private information or sensitive data.
+
+---
+
+<div align="center">
+
+<img src="https://www.mushoku.eu.cc/waifu/" width="240" alt="Random animated waifu">
+
+### 🌸 AnimeAV1
+
+ありがとうございます！ ✨
+
+![Visitors](https://anime-counter.lulushu.workers.dev/@animeav1?theme=waifu&pixelated=1&scale=1)
+
+**Made with ❤️ by iLoveddev**
+
+</div>
   "status": "Finished Airing",
   "type": "TV",
   "year": 2021
