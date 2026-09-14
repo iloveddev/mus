@@ -1,21 +1,40 @@
-MIT License
+AnimeAV1 API — Usage License
 
 Copyright (c) 2026 iLoveddev
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permissions
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Permission is granted to use AnimeAV1 API free of charge solely for integration into non-profit projects, applications, websites, or services, provided that the API is accessed through the official domain authorized by the author.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Users may send requests to the API and integrate its responses into their own non-profit projects.
+
+Restrictions
+
+The following actions are strictly prohibited without prior written permission from the author:
+
+- Modifying, altering, or adapting the API or its source code.
+- Migrating, cloning, mirroring, replicating, or self-hosting the API.
+- Redistributing the API or providing copies of it to third parties.
+- Creating derivative APIs or services based on the API.
+- Using the API for commercial purposes or to generate direct or indirect financial profit.
+- Using the API through domains or servers other than those officially authorized by the author.
+- Removing, hiding, or modifying copyright, attribution, or license notices.
+- Presenting the API, its infrastructure, or its code as your own.
+
+Integration
+
+Developers are permitted to integrate AnimeAV1 API into their own non-profit applications, websites, or projects, as long as requests are made directly to the official authorized API domain.
+
+Integration of the API does not transfer ownership or rights to the API, source code, infrastructure, domains, or related services.
+
+Additional Authorization
+
+Any use not explicitly permitted by this license — including commercial use, migration to another server, source-code modification, cloning, mirroring, or use through an unauthorized domain — requires prior explicit permission from iLoveddev.
+
+Termination
+
+Any violation of the terms of this license automatically terminates the permissions granted herein.
+
+Disclaimer
+
+AnimeAV1 API is provided "AS IS", without warranties of any kind. The author shall not be held responsible for any damage, loss, interruption, errors, or other consequences resulting from the use of the API.
