@@ -1,111 +1,106 @@
-# MUS API V1! 
-<div align="center"><img src="https://is.wuaze.com/static/icon/Icon.png" alt="AnimeAV1" width="150">AnimeAV1 API
+<div align="center">
 
-🎌 A simple, fast and free Anime API built with PHP.
+<img src="https://is.wuaze.com/static/icon/Icon.png" width="120" alt="AnimeAV1">
 
-<p>
-  <img src="https://img.shields.io/badge/PHP-Native-777BB4?style=for-the-badge&logo=php&logoColor=white">
-  <img src="https://img.shields.io/badge/API-REST-00A98F?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Status-Online-success?style=for-the-badge">
-</p><p>
-  <a href="https://www.mushoku.eu.cc/">🌐 API</a>
-  •
-  <a href="https://www.mushoku.eu.cc/catalogo/">📚 Catalog</a>
-  •
-  <a href="https://www.mushoku.eu.cc/ultimos/">🆕 Latest</a>
-  •
-  <a href="https://www.mushoku.eu.cc/top/">🔥 Top</a>
-</p><br><img src="https://count.getloli.com/@animeav1?name=animeav1&theme=booru-r6&padding=7&offset=0&align=center&scale=1&pixelated=1&darkmode=auto" alt="AnimeAV1 Visitors"><br><br>
+# AnimeAV1 API
 
-<img src="https://media.tenor.com/3XqKJvGmV4AAAAAC/anime-girl.gif" width="150" alt="Anime Waifu"><br><sub>🌸 Thanks for visiting AnimeAV1!</sub>
+**Anime, simplified.** 🌸
 
-<br><sub>ありがとうございます！ ✨</sub>
+A lightweight anime API built with native PHP.
 
-</div>---
+<br>
 
-<div align="center">«🎌 AnimeAV1 — Anime, simplified.»
+[![PHP](https://img.shields.io/badge/PHP-Native-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
+[![API](https://img.shields.io/badge/REST-API-00A98F?style=for-the-badge)](#-endpoints)
+[![Apache](https://img.shields.io/badge/Apache-.htaccess-D22128?style=for-the-badge&logo=apache&logoColor=white)](#%EF%B8%8F-built-with)
+[![Status](https://img.shields.io/badge/Status-Online-2ea44f?style=for-the-badge)](https://www.mushoku.eu.cc/)
 
-A lightweight PHP API designed to provide anime information, episodes, servers and additional metadata through a simple REST interface.
+<br>
 
-</div>---
+[🌐 API](https://www.mushoku.eu.cc/) •
+[📚 Catalog](https://www.mushoku.eu.cc/catalogo/) •
+[🆕 Latest](https://www.mushoku.eu.cc/ultimos/) •
+[🔥 Top](https://www.mushoku.eu.cc/top/)
 
-✨ Features
-
-| Feature
-🎌| Anime catalog
-🔎| Anime search
-📺| Episodes & streaming servers
-⭐| MyAnimeList information
-🏷️| Genres, status and metadata
-🆕| Recently added anime
-🔥| Popular / top anime
-🔤| Alphabetical browsing
-📅| Anime schedule
-⚡| Response caching
-🛡️| IP-based rate limiting
-🐘| Native PHP backend
+</div>
 
 ---
 
-🌐 Official Servers
+## ✨ Features
 
-🟢 Main Server
+| Feature | Description |
+|---|---|
+| ⚡ Lightweight | Built with native PHP |
+| 📚 Anime Catalog | Access the available anime catalog |
+| 🔎 Search | Search anime by name |
+| 🎬 Episodes | Access episode information |
+| 🇯🇵 MAL / Jikan | Anime metadata through MyAnimeList data |
+| 🎧 SUB / DUB | Support for available subtitle and dub information |
+| 🚀 REST API | Simple HTTP endpoints returning JSON |
+| 💾 Cache | Caching system to reduce unnecessary requests |
+| 🛡️ Rate Limit | Protection against excessive requests |
 
+---
+
+## 🌐 Servers
+
+### Main Server
+
+```text
 https://www.mushoku.eu.cc/
 
-The primary and officially supported AnimeAV1 API server.
-
-🟡 Alternate Server
+Alternate Server
 
 http://ww2.mushoku.eu.cc/
 
-Coming soon.
-
-The alternate server is intended to provide additional availability when it becomes operational.
-
-«⚠️ Only domains officially provided by AnimeAV1 / iLoveddev should be considered official API servers.»
 
 ---
 
-📡 API Endpoints
+📡 Endpoints
+
+All endpoints return JSON data.
 
 📚 Catalog
 
 GET /catalogo/
 
-Returns the available anime catalog.
+Example:
+
+https://www.mushoku.eu.cc/catalogo/
+
 
 ---
 
 🔎 Search
 
-GET /buscar/?q=naruto
+GET /buscar/?q={query}
 
-Search for anime by name.
+Example:
+
+https://www.mushoku.eu.cc/buscar/?q=mushoku+tensei
+
 
 ---
 
-🎌 Anime Information
+🎬 Anime
 
 GET /anime/{slug}/
 
-Returns information about a specific anime.
-
 Example:
 
-/anime/mushoku-tensei/
+https://www.mushoku.eu.cc/anime/mushoku-tensei/
+
 
 ---
 
-📺 Episode
+▶️ Episode
 
 GET /ep/{slug}/E{number}/
 
-Returns information about a specific episode, including available streaming servers.
-
 Example:
 
-/ep/mushoku-tensei/E01/
+https://www.mushoku.eu.cc/ep/mushoku-tensei/E1/
+
 
 ---
 
@@ -113,15 +108,21 @@ Example:
 
 GET /mal/{slug}/
 
-Returns additional MyAnimeList-related information for an anime.
+Example:
+
+https://www.mushoku.eu.cc/mal/mushoku-tensei/
+
 
 ---
 
-🆕 Latest Anime
+🆕 Latest Releases
 
 GET /ultimos/
 
-Returns recently added anime.
+Example:
+
+https://www.mushoku.eu.cc/ultimos/
+
 
 ---
 
@@ -129,19 +130,21 @@ Returns recently added anime.
 
 GET /top/
 
-Returns popular/top anime.
+Example:
+
+https://www.mushoku.eu.cc/top/
+
 
 ---
 
-🔤 Alphabetical Index
+🔤 Alphabetical Search
 
 GET /az/{letter}/
 
-Browse anime alphabetically.
-
 Example:
 
-/az/a/
+https://www.mushoku.eu.cc/az/a/
+
 
 ---
 
@@ -149,24 +152,32 @@ Example:
 
 GET /horario/
 
-Returns the anime release schedule.
+Example:
+
+https://www.mushoku.eu.cc/horario/
+
 
 ---
 
 📦 Response Format
 
-AnimeAV1 API returns structured data primarily in JSON.
+AnimeAV1 uses JSON responses.
 
 Example:
 
 {
   "title": "Mushoku Tensei",
   "slug": "mushoku-tensei",
-  "episodes": 24,
-  "status": "Completed"
+  "episodes": [
+    {
+      "number": 1,
+      "title": "Episode 1"
+    }
+  ]
 }
 
-«The exact response structure may vary depending on the endpoint and available data.»
+The exact response structure may vary depending on the endpoint.
+
 
 ---
 
@@ -180,11 +191,10 @@ Please avoid excessive requests and respect the API infrastructure.
 
 Attempts to bypass rate limits or intentionally overload the service may result in access restrictions.
 
+
 ---
 
 🚀 Quick Start
-
-You can request an endpoint directly from your application.
 
 JavaScript
 
@@ -198,20 +208,25 @@ PHP
 
 <?php
 
-$url = "https://www.mushoku.eu.cc/catalogo/";
+$response = file_get_contents(
+    "https://www.mushoku.eu.cc/catalogo/"
+);
 
-$response = file_get_contents($url);
 $data = json_decode($response, true);
 
 print_r($data);
+
 
 ---
 
 🛠️ Built With
 
-<div align="center"><img src="https://img.shields.io/badge/PHP-Native-777BB4?style=for-the-badge&logo=php&logoColor=white">
-<img src="https://img.shields.io/badge/Apache-.htaccess-D22128?style=for-the-badge&logo=apache&logoColor=white">
-<img src="https://img.shields.io/badge/REST-API-00A98F?style=for-the-badge"></div>AnimeAV1 is built using native PHP, without CakePHP, FuelPHP, or another PHP framework.
+<div align="center">  
+
+</div>AnimeAV1 is built using native PHP, without CakePHP, FuelPHP, or another PHP framework.
+
+The project uses Apache .htaccess rules for routing and access handling.
+
 
 ---
 
@@ -237,8 +252,8 @@ animeav1-api/
 ├── horario.php
 ├── index.php
 ├── 404.php
-│
 └── .htaccess
+
 
 ---
 
@@ -250,27 +265,44 @@ AnimeAV1 API is intended for free integration into non-profit projects.
 
 You may:
 
-- Integrate the API into non-profit applications and websites.
-- Use API responses within your own project.
-- Create interfaces that consume the API.
-- Use the API for personal, educational or community projects.
+Integrate the API into non-profit applications and websites.
+
+Use API responses within your own project.
+
+Create interfaces that consume the API.
+
+Use the API for personal, educational or community projects.
+
 
 ❌ Not Allowed
 
 Without explicit permission from iLoveddev, you may not:
 
-- Modify the API source code.
-- Clone, mirror or migrate the API.
-- Self-host or redistribute the API.
-- Create an alternative API based on AnimeAV1.
-- Resell access to the API.
-- Use the API for commercial purposes.
-- Proxy or mirror the API under another domain.
-- Bypass rate limits or security restrictions.
-- Impersonate AnimeAV1 or iLoveddev.
-- Present AnimeAV1's infrastructure or code as your own.
+Modify the AnimeAV1 API source code.
 
-«The API is provided for integration, not migration or redistribution.»
+Clone, mirror or migrate the API.
+
+Self-host or redistribute the API.
+
+Create an alternative API based on AnimeAV1.
+
+Resell access to the API.
+
+Use the API for commercial purposes.
+
+Proxy or relay the API under another domain.
+
+Bypass rate limits or security restrictions.
+
+Impersonate AnimeAV1 or iLoveddev.
+
+Present AnimeAV1's infrastructure or code as your own.
+
+
+> The API is provided for integration, not migration or redistribution.
+
+
+
 
 ---
 
@@ -278,7 +310,10 @@ Without explicit permission from iLoveddev, you may not:
 
 If your project uses AnimeAV1 API, attribution is appreciated:
 
-Powered by AnimeAV1 API — by iLoveddev
+> Powered by AnimeAV1 API — by iLoveddev.
+
+
+
 
 ---
 
@@ -286,7 +321,8 @@ Powered by AnimeAV1 API — by iLoveddev
 
 If you find a bug, security issue or abuse involving the API, please report it through the repository's Issues section.
 
-Please do not intentionally exploit vulnerabilities or overload the API.
+Please do not intentionally exploit vulnerabilities or intentionally overload the API.
+
 
 ---
 
@@ -294,20 +330,31 @@ Please do not intentionally exploit vulnerabilities or overload the API.
 
 AnimeAV1 API is distributed under a custom usage license.
 
-See ""LICENSE"" (LICENSE) for the complete terms and restrictions.
+See LICENSE for the complete terms and restrictions.
+
 
 ---
 
-<br><div align="center"><img src="https://is.wuaze.com/static/icon/Icon.png" alt="AnimeAV1" width="65">🌸 AnimeAV1
+🌸 Thanks for Visiting
+
+<div align="center"><img src="https://is.wuaze.com/static/icon/Icon.png" width="90" alt="AnimeAV1">🎁 AnimeAV1
 
 Made with ❤️ by iLoveddev
 
-<br><sub>アニメを、もっとシンプルに。 ✨</sub>
+アニメを、もっとシンプルに。 ✨
 
-<br><br>
+<br><img src="https://anime-counter.lulushu.workers.dev/@animeav1?theme=naruto&pixelated=1&scale=1" alt="AnimeAV1 visitor counter"><br><br>
 
-<img src="https://count.getloli.com/@animeav1?name=animeav1&theme=booru-r6&padding=7&offset=0&align=center&scale=1&pixelated=1&darkmode=auto" alt="AnimeAV1 Visitor Counter"><br><br>
+<img src="https://www.mushoku.eu.cc/waifu/" width="300" alt="Random animated waifu"><br><br>
 
-<sub>© 2026 iLoveddev — AnimeAV1 API</sub>
+<sub>🌸 Thanks for visiting AnimeAV1!</sub>
+
+<br><sub>ありがとうございます！ ✨</sub>
 
 </div>
+---
+
+<div align="center">AnimeAV1 — Anime, simplified.
+
+</div>
+```
