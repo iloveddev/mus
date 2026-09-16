@@ -1,40 +1,64 @@
-<div align="center"><img src="https://is.wuaze.com/static/icon/Icon.png" width="120" alt="AnimeAV1 Logo">AnimeAV1 API
+<p align="center">
+  <img src="https://is.wuaze.com/static/icon/Icon.png" width="120" alt="AnimeAV1 Logo">
+</p>
 
-🎌 Anime API · Jikan/MAL · SUB & DUB · JSON
+<h1 align="center">AnimeAV1 API</h1>
 
-""API" (https://img.shields.io/badge/API-Online-ff6b9d?style=for-the-badge)" (https://www.mushoku.eu.cc/)
-""PHP" (https://img.shields.io/badge/PHP-Native-777bb4?style=for-the-badge&logo=php&logoColor=white)" (https://www.php.net/)
-""License" (https://img.shields.io/badge/License-Custom-ff9f43?style=for-the-badge)" (#-licencia)
+<p align="center">
+  🎌 Anime API · Jikan/MAL · SUB & DUB · JSON
+</p>
 
-<br>AnimeAV1 es una API ligera de anime creada para proyectos, aplicaciones y sitios relacionados con anime.
+<p align="center">
+  <a href="https://www.mushoku.eu.cc/">
+    <img src="https://img.shields.io/badge/API-Online-ff6b9d?style=for-the-badge" alt="API Online">
+  </a>
+  <a href="https://www.php.net/">
+    <img src="https://img.shields.io/badge/PHP-Native-777bb4?style=for-the-badge&logo=php&logoColor=white" alt="PHP Native">
+  </a>
+  <img src="https://img.shields.io/badge/License-Custom-ff9f43?style=for-the-badge" alt="Custom License">
+</p>
 
-"🌐 API" (https://www.mushoku.eu.cc/) · "📚 Documentación" (#-endpoints) · "🐛 Reportar problema" (../../issues)
+<p align="center">
+  <strong>AnimeAV1</strong> es una API ligera de anime creada para proyectos, aplicaciones y sitios relacionados con anime.
+</p>
 
-</div>---
+<p align="center">
+  <a href="https://www.mushoku.eu.cc/">🌐 API</a> ·
+  <a href="#-endpoint">📚 Documentación</a> ·
+  <a href="../../issues">🐛 Reportar problema</a>
+</p>
 
-📚 Catálogo
+---
 
-«Obtiene los animes disponibles en el catálogo de AnimeAV1.»
+# 📚 Catálogo
 
-🔗 Endpoint
+Obtiene los animes disponibles en el catálogo de AnimeAV1.
 
+## 🔗 Endpoint
+
+```http
 GET /catalogo/
+```
 
-⚙️ Parámetros
+## ⚙️ Parámetros
 
-Parámetro| Tipo| Descripción
-"page"| "int"| Página del catálogo
-"genre"| "string"| Filtrar por género
-"search"| "string"| Filtrar por búsqueda
-"status"| "string"| Filtrar por estado
-"order"| "string"| Orden de resultados
+| Parámetro | Tipo | Descripción |
+|:---|:---:|:---|
+| `page` | `int` | Página del catálogo |
+| `genre` | `string` | Filtrar por género |
+| `search` | `string` | Filtrar por búsqueda |
+| `status` | `string` | Filtrar por estado |
+| `order` | `string` | Orden de resultados |
 
-💡 Ejemplo
+## 💡 Ejemplo
 
+```http
 GET /catalogo/?page=1
+```
 
-📦 Respuesta JSON
+## 📦 Respuesta JSON
 
+```json
 {
   "ok": true,
   "pagina_actual": 1,
@@ -52,11 +76,11 @@ GET /catalogo/?page=1
     }
   ]
 }
+```
 
-⚠️ Página fuera de rango
+## ⚠️ Página fuera de rango
 
-Si la página solicitada supera el número total de páginas:
-
+```json
 {
   "ok": true,
   "pagina_actual": 999,
@@ -66,11 +90,11 @@ Si la página solicitada supera el número total de páginas:
   "resultados": [],
   "nota": "La página 999 está fuera de rango: el catálogo solo tiene 100 páginas con estos filtros."
 }
+```
 
 ---
 
-<div align="center">🎌 AnimeAV1 API
-
-Datos obtenidos de AnimeAV1 · API no oficial
-
-</div>
+<p align="center">
+  🎌 <strong>AnimeAV1 API</strong><br>
+  <sub>Datos obtenidos de AnimeAV1 · API no oficial</sub>
+</p>
