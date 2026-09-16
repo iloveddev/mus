@@ -1,51 +1,76 @@
-Catálogo
+<div align="center"><img src="https://is.wuaze.com/static/icon/Icon.png" width="120" alt="AnimeAV1 Logo">AnimeAV1 API
 
-- Endpoint Name: Catálogo
-- Método: "GET"
-- Endpoint: "/catalogo/"
+🎌 Anime API · Jikan/MAL · SUB & DUB · JSON
 
-Obtiene una lista de animes del catálogo.
+""API" (https://img.shields.io/badge/API-Online-ff6b9d?style=for-the-badge)" (https://www.mushoku.eu.cc/)
+""PHP" (https://img.shields.io/badge/PHP-Native-777bb4?style=for-the-badge&logo=php&logoColor=white)" (https://www.php.net/)
+""License" (https://img.shields.io/badge/License-Custom-ff9f43?style=for-the-badge)" (#-licencia)
 
-Parámetros opcionales
+<br>AnimeAV1 es una API ligera de anime creada para proyectos, aplicaciones y sitios relacionados con anime.
 
-- "page" — Página del catálogo. Por defecto: "1".
-- "genre" — Filtra por género.
-- "search" — Filtra por búsqueda.
-- "status" — Filtra por estado.
-- "order" — Orden de resultados. Ejemplo: "popular".
+"🌐 API" (https://www.mushoku.eu.cc/) · "📚 Documentación" (#-endpoints) · "🐛 Reportar problema" (../../issues)
 
-Ejemplo
+</div>---
 
-"GET /catalogo/?page=1"
+📚 Catálogo
 
-Respuesta JSON
+«Obtiene los animes disponibles en el catálogo de AnimeAV1.»
+
+🔗 Endpoint
+
+GET /catalogo/
+
+⚙️ Parámetros
+
+Parámetro| Tipo| Descripción
+"page"| "int"| Página del catálogo
+"genre"| "string"| Filtrar por género
+"search"| "string"| Filtrar por búsqueda
+"status"| "string"| Filtrar por estado
+"order"| "string"| Orden de resultados
+
+💡 Ejemplo
+
+GET /catalogo/?page=1
+
+📦 Respuesta JSON
 
 {
   "ok": true,
   "pagina_actual": 1,
-  "por_pagina": 0,
-  "total_paginas": 0,
-  "total_resultados": 0,
+  "por_pagina": 24,
+  "total_paginas": 100,
+  "total_resultados": 2400,
   "resultados": [
     {
-      "id": 0,
-      "titulo": "...",
-      "sinopsis": "...",
-      "slug": "...",
-      "poster": "https://cdn.animeav1.com/img/media/poster/0.jpg",
-      "url": "/anime/..."
+      "id": 123,
+      "titulo": "Kimetsu no Yaiba",
+      "sinopsis": "La historia sigue a Tanjiro Kamado...",
+      "slug": "kimetsu-no-yaiba",
+      "poster": "https://cdn.animeav1.com/img/media/poster/123.jpg",
+      "url": "/anime/kimetsu-no-yaiba/"
     }
   ]
 }
 
-Si se solicita una página fuera del rango disponible:
+⚠️ Página fuera de rango
+
+Si la página solicitada supera el número total de páginas:
 
 {
   "ok": true,
   "pagina_actual": 999,
-  "por_pagina": 0,
-  "total_paginas": 0,
-  "total_resultados": 0,
+  "por_pagina": 24,
+  "total_paginas": 100,
+  "total_resultados": 2400,
   "resultados": [],
-  "nota": "La página 999 está fuera de rango: el catálogo solo tiene 0 páginas con estos filtros."
+  "nota": "La página 999 está fuera de rango: el catálogo solo tiene 100 páginas con estos filtros."
 }
+
+---
+
+<div align="center">🎌 AnimeAV1 API
+
+Datos obtenidos de AnimeAV1 · API no oficial
+
+</div>
