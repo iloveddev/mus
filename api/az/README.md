@@ -1,38 +1,90 @@
-A-Z
+<p align="center">
+  <img src="https://is.wuaze.com/static/icon/Icon.png" width="120" alt="AnimeAV1 Logo">
+</p>
 
-- Endpoint Name: Catálogo A-Z
-- Método: "GET"
-- Endpoint: "/az/{letra}/"
+<h1 align="center">AnimeAV1 API</h1>
 
-Obtiene los animes cuyo título comienza con la letra indicada.
+<p align="center">
+  🎌 Anime API · Jikan/MAL · SUB & DUB · JSON
+</p>
 
-Parámetros
+<p align="center">
+  <a href="https://www.mushoku.eu.cc/">
+    <img src="https://img.shields.io/badge/API-Online-ff6b9d?style=for-the-badge" alt="API Online">
+  </a>
+  <a href="https://www.php.net/">
+    <img src="https://img.shields.io/badge/PHP-Native-777bb4?style=for-the-badge&logo=php&logoColor=white" alt="PHP Native">
+  </a>
+  <img src="https://img.shields.io/badge/License-Custom-ff9f43?style=for-the-badge" alt="Custom License">
+</p>
 
-- "{letra}" — Una letra de la A a la Z.
-- "page" — Página del catálogo. Por defecto: "1".
-- "order" — Orden opcional. Ejemplo: "popular".
+<p align="center">
+  <strong>AnimeAV1</strong> es una API ligera de anime creada para proyectos, aplicaciones y sitios relacionados con anime.
+</p>
 
-Ejemplo
+<p align="center">
+  <a href="https://www.mushoku.eu.cc/">🌐 API</a> ·
+  <a href="#-endpoint">📚 Documentación</a> ·
+  <a href="../../issues">🐛 Reportar problema</a>
+</p>
 
-"GET /az/a/"
+---
 
-Respuesta JSON
+# 🔤 Catálogo A-Z
 
+Filtra el catálogo utilizando la letra inicial del título.
+
+## 🔗 Endpoint
+
+```http
+GET /az/{letra}/
+```
+
+## ⚙️ Parámetros
+
+| Parámetro | Tipo | Descripción |
+|:---|:---:|:---|
+| `{letra}` | `string` | Letra inicial |
+| `page` | `int` | Página del catálogo |
+| `order` | `string` | Orden de resultados |
+
+## 💡 Ejemplo
+
+```http
+GET /az/a/
+```
+
+## 📦 Respuesta JSON
+
+```json
 {
   "ok": true,
   "letra": "A",
   "pagina_actual": 1,
-  "por_pagina": 0,
-  "total_paginas": 0,
-  "total_resultados": 0,
+  "por_pagina": 24,
+  "total_paginas": 10,
+  "total_resultados": 240,
   "resultados": [
     {
-      "id": 0,
-      "titulo": "...",
-      "sinopsis": "...",
-      "slug": "...",
-      "poster": "https://cdn.animeav1.com/img/media/poster/0.jpg",
-      "url": "/anime/..."
+      "id": 123,
+      "titulo": "Attack on Titan",
+      "sinopsis": "Hace siglos, la humanidad fue masacrada...",
+      "slug": "attack-on-titan",
+      "poster": "https://cdn.animeav1.com/img/media/poster/123.jpg",
+      "url": "/anime/attack-on-titan/"
     }
   ]
 }
+```
+
+## 🔥 Orden popular
+
+```http
+GET /az/a/?order=popular
+```
+
+---
+
+<p align="center">
+  🔤 <strong>A → Z · Anime Catalog</strong>
+</p>
