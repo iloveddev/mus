@@ -39,7 +39,7 @@ Está diseñada para ser sencilla de integrar en aplicaciones web, aplicaciones 
 - ⚡ Sistema de caché
 - 🚦 Rate limit
 - 📦 Respuestas JSON
-- 🪶 Backend ligero en PHP nativo
+- 🪶 Backend ligero
 
 ---
 
@@ -51,9 +51,9 @@ https://www.mushoku.eu.cc/
 
 ### Servidor alternativo
 
-http://ww2.mushoku.eu.cc/
+https://ww2.mushoku.eu.cc/
 
-> El servidor alternativo está previsto como respaldo y puede no estar disponible permanentemente.
+> Servidor que conecta con AnimeAV1 CC solo SUB (ES) 
 
 ---
 
