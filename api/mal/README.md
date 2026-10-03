@@ -30,7 +30,7 @@
 
 ---
 
-# 🍥 MyAnimeList
+# 🍥 MyAnimeList **DOWN**
 
 Obtiene información de MyAnimeList mediante Jikan.
 
