@@ -35,7 +35,7 @@ Está diseñada para ser sencilla de integrar en aplicaciones web, aplicaciones 
 - ⭐ Rankings
 - 📅 Horarios
 - 🔤 Búsqueda por letra
-- 🆔 Información de MyAnimeList
+- 🆔 Información de MyAnimeList **DOWN**
 - ⚡ Sistema de caché
 - 🚦 Rate limit
 - 📦 Respuestas JSON
@@ -47,12 +47,12 @@ Está diseñada para ser sencilla de integrar en aplicaciones web, aplicaciones 
 
 ### Servidor principal
 
-https://www.mushoku.eu.cc/
+https://www.mushoku.eu.cc/ **OK**
 
 ### Servidor alternativo
 
-https://ww2.mushoku.eu.cc/
-
+https://ww2.mushoku.eu.cc/ **OK**
+https://ww3.mushoku.eu.cc/ **OK**
 > Servidor que conecta con AnimeAV1 CC solo SUB (ES) 
 
 ---
@@ -109,7 +109,7 @@ https://www.mushoku.eu.cc/ep/mushoku-no-eiyuu-betsu-ni-skill-nanka-iranakatta-n-
 
 ---
 
-## 🇯🇵 MyAnimeList
+## 🇯🇵 MyAnimeList - Jikan - **DOWN ENDPOINT**
 
 GET /mal/{slug}/
 
