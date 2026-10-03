@@ -5,7 +5,7 @@
 <h1 align="center">AnimeAV1 API</h1>
 
 <p align="center">
-  🎌 Anime API · Jikan/MAL · SUB & DUB · JSON
+  🎌 Anime API · Jikan/MAL · SUB & DUB · JSON **DOWN**
 </p>
 
 <p align="center">
